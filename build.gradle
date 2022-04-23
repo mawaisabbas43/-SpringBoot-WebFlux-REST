@@ -23,10 +23,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
+    testImplementation group: 'de.flapdoodle.embed',
+            name: 'de.flapdoodle.embed.mongo',
+            version: '3.4.5'
 }
 
 tasks.named('test') {
